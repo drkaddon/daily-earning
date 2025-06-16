@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Earning - Government Approved</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .highlight {
+      text-align: center;
+      font-size: 1.2em;
+      color: green;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .pack-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      text-align: center;
+      position: relative;
+    }
+    .price {
+      font-size: 1.5em;
+      color: #007bff;
+    }
+    .info {
+      margin: 10px 0;
+    }
+    .buy-button {
+      background: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .referral {
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 8px;
+    }
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+    .popup-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .popup-content img {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+    .popup-content input {
+      padding: 10px;
+      width: 80%;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .popup-content button {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔥 Daily Earning</h1>
+  <div class="highlight">✅ Government Approved Website</div>
+  <div class="pack-container" id="packs"></div>
+
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>Payment Section</h2>
+      <p>Scan this QR to Pay</p>
+      <img src="https://www.mediafire.com/convkey/8d7f/n3aayxxv3kapd35wrtp6s8u7y5xqmxk6g.jpg" alt="QR Code">
+      <p>Then enter your transaction ID</p>
+      <input type="text" id="txn" placeholder="Enter Transaction ID">
+      <br>
+      <button onclick="submitTransaction()">Submit</button>
+    </div>
+  </div>
+
+  <script>
+    const packData = [
+      { price: 150, daily: 90 }, { price: 199, daily: 120 }, { price: 299, daily: 180 },
+      { price: 399, daily: 240 }, { price: 499, daily: 300 }, { price: 999, daily: 600 },
+      { price: 1999, daily: 1200 }, { price: 2999, daily: 1800 }, { price: 3999, daily: 2400 },
+      { price: 4999, daily: 3000 }, { price: 5999, daily: 3600 }, { price: 6999, daily: 4200 },
+      { price: 7999, daily: 4800 }, { price: 8999, daily: 5400 }, { price: 9999, daily: 6000 },
+      { price: 15000, daily: 9000 }
+    ];
+
+    const packContainer = document.getElementById("packs");
+    packData.forEach(({ price, daily }) => {
+      const div = document.createElement("div");
+      div.className = "card";
+      div.innerHTML = `
+        <div class="price">₹${price} Pack</div>
+        <div class="info">Daily ₹${daily} without work<br>Daily ₹${daily * 2} with work</div>
+        <button class="buy-button" onclick="showPopup()">Buy Now</button>
+        <div class="referral">Earn 40% by sharing this pack</div>
+      `;
+      packContainer.appendChild(div);
+    });
+
+    function showPopup() {
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function submitTransaction() {
+      const txn = document.getElementById("txn").value;
+      if (txn.length > 4) {
+        alert("Transaction ID Submitted. You will get your course soon. ✅\n(Email sent to: genuineearniingg@gmail.com)");
+        window.location.href = "https://youtube.com/playlist?list=PLE0okpeHKm_me8UVEL0elad-7rfc_gNVp";
+      } else {
+        alert("Please enter a valid Transaction ID");
+      }
+    }
+  </script>
+</body>
+</html>
